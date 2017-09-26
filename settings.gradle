@@ -1,1 +1,1 @@
-include ':app', ':util'
+include ':bamboo', ':bamboo-sample'

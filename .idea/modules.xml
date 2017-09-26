@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VegeUtil.iml" filepath="$PROJECT_DIR$/VegeUtil.iml" />
-      <module fileurl="file://$PROJECT_DIR$/VegeUtil.iml" filepath="$PROJECT_DIR$/VegeUtil.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bamboo/bamboo.iml" filepath="$PROJECT_DIR$/bamboo/bamboo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bamboo-parent.iml" filepath="$PROJECT_DIR$/bamboo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bamboo-sample/bamboo-sample.iml" filepath="$PROJECT_DIR$/bamboo-sample/bamboo-sample.iml" />
     </modules>
   </component>
 </project>
