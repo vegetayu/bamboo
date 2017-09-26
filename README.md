@@ -1,9 +1,13 @@
-# VegeUtil
+# bamboo
+工具类库。
 
-Logger类，后面会继续完善。
-
-compile 'com.github.wushenggit:VegeUtil:0.1.0'
+Logger：打印日志，并可定位。
+```
+compile 'com.github.vegetayu:bamboo:0.2.0'
+```
 
 or 
+```
+compile 'com.github.vegetayu.bamboo:master-SNAPSHOT'
+```
  
-compile 'com.github.wushenggit.VegeUtil:master-SNAPSHOT'
