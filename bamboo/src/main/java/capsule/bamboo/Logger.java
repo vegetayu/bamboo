@@ -35,9 +35,8 @@ public class Logger {
   }
 
   public static void v(String tag, String msg) {
-    String t = buildTag(tag);
-    String message = buildMsg(msg);
-    printLog("v", t, message);
+    String t = checkTag(tag);
+    printLog("v", t, msg);
   }
   /* ******* debug ****** */
 
@@ -53,9 +52,8 @@ public class Logger {
   }
 
   public static void d(String tag, String msg) {
-    String t = buildTag(tag);
-    String message = buildMsg(msg);
-    printLog("d", t, message);
+    String t = checkTag(tag);
+    printLog("d", t, msg);
   }
   /* ******* information ****** */
 
@@ -71,9 +69,8 @@ public class Logger {
   }
 
   public static void i(String tag, String msg) {
-    String t = buildTag(tag);
-    String message = buildMsg(msg);
-    printLog("i", t, message);
+    String t = checkTag(tag);
+    printLog("i", t, msg);
   }
   /* ******* warning ****** */
 
@@ -89,9 +86,8 @@ public class Logger {
   }
 
   public static void w(String tag, String msg) {
-    String t = buildTag(tag);
-    String message = buildMsg(msg);
-    printLog("w", t, message);
+    String t = checkTag(tag);
+    printLog("w", t, msg);
   }
   /* ******* error ****** */
 
@@ -107,22 +103,45 @@ public class Logger {
   }
 
   public static void e(String tag, String msg) {
-    String t = buildTag(tag);
-    String message = buildMsg(msg);
-    printLog("e", t, message);
+    String t = checkTag(tag);
+    printLog("e", t, msg);
   }
 
   /* ****** internal method ****** */
 
-  private static String buildTag(String tag) {
+  private static String checkTag(String tag) {
     return tag == null ? Logger.tag : tag;
   }
 
-  private static String buildMsg(String msg) {
+  private static void printLog(String level, String tag, String msg) {
+    if (!logEnable) {
+      return;
+    }
+    String clickableMessage = buildClickableMessage(level, msg);
+    switch (level) {
+      case "v":
+        Log.v(tag, clickableMessage);
+        break;
+      case "d":
+        Log.d(tag, clickableMessage);
+        break;
+      case "i":
+        Log.i(tag, clickableMessage);
+        break;
+      case "w":
+        Log.w(tag, clickableMessage);
+        break;
+      case "e":
+        Log.e(tag, clickableMessage);
+        break;
+    }
+  }
+
+  private static String buildClickableMessage(String level, String msg) {
     StackTraceElement[] stackTraceElement = Thread.currentThread().getStackTrace();
     int currentIndex = -1;
     for (int i = 0; i < stackTraceElement.length; i++) {
-      if (stackTraceElement[i].getMethodName().compareTo("i") == 0) {
+      if (stackTraceElement[i].getMethodName().compareTo(level) == 0) {
         currentIndex = i;
       }
     }
@@ -143,28 +162,5 @@ public class Logger {
         + ".java:"
         + lineNumber
         + ")";
-  }
-
-  private static void printLog(String level, String tag, String msg) {
-    if (!logEnable) {
-      return;
-    }
-    switch (level) {
-      case "v":
-        Log.v(tag, msg);
-        break;
-      case "d":
-        Log.d(tag, msg);
-        break;
-      case "i":
-        Log.i(tag, msg);
-        break;
-      case "w":
-        Log.w(tag, msg);
-        break;
-      case "e":
-        Log.e(tag, msg);
-        break;
-    }
   }
 }

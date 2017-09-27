@@ -2,6 +2,7 @@ package com.capsule.bamboo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import capsule.bamboo.Logger;
@@ -18,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Logger.i("点击了这里");
       }
     });
+    Logger.v("hello world!");
+    Logger.d("hello world!");
     Logger.i("hello world!");
-
-
+    Logger.w("hello world!");
+    Logger.e("hello world!");
   }
 }
