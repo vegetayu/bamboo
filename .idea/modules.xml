@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bamboo/bamboo.iml" filepath="$PROJECT_DIR$/bamboo/bamboo.iml" />
-      <module fileurl="file://D:\workspace\bamboo\bamboo\bamboo.iml" filepath="D:\workspace\bamboo\bamboo\bamboo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bamboo-parent.iml" filepath="$PROJECT_DIR$/bamboo-parent.iml" />
-      <module fileurl="file://D:\workspace\bamboo\bamboo-parent.iml" filepath="D:\workspace\bamboo\bamboo-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/bamboo-sample/bamboo-sample.iml" filepath="$PROJECT_DIR$/bamboo-sample/bamboo-sample.iml" />
-      <module fileurl="file://D:\workspace\bamboo\bamboo-sample\bamboo-sample.iml" filepath="D:\workspace\bamboo\bamboo-sample\bamboo-sample.iml" />
     </modules>
   </component>
 </project>
