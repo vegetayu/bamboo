@@ -1,4 +1,4 @@
-package capsule.bamboo;
+package yuluyao.logger;
 
 import android.util.Log;
 

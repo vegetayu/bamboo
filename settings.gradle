@@ -1,4 +1,1 @@
 include ':bamboo', ':bamboo-sample'
-
-
-rootProject.name = 'bamboo-parent'

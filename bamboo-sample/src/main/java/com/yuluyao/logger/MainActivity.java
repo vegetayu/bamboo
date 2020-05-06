@@ -1,11 +1,10 @@
-package com.capsule.bamboo;
+package com.yuluyao.logger;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import capsule.bamboo.Logger;
+import yuluyao.logger.Logger;
 
 public class MainActivity extends AppCompatActivity {
 

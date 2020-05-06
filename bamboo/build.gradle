@@ -1,16 +1,21 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.vegetayu'
+apply from: "$rootDir/mavenscript/gradle-mavenizer.gradle"
+
+ext {
+  mavProjectName = "logger"
+  mavLibraryDescription = "clickable logcat"
+  mavDevelopers = ['yu': 'luyao']
+//  mavLibraryLicenses = ""
+//  mavSiteUrl = ""
+//  mavGitUrl = ""
+}
 
 android {
-  compileSdkVersion 26
-//  buildToolsVersion '26.0.3'
+  compileSdkVersion 28
 
   defaultConfig {
     minSdkVersion 15
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
+    targetSdkVersion 28
 
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
@@ -24,31 +29,6 @@ android {
 
 dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
-  provided 'com.android.support:appcompat-v7:26.1.0'
-  testCompile 'junit:junit:4.12'
+  provided 'com.android.support:appcompat-v7:28.0.0'
 }
 
-
-// build a jar with source files
-task sourcesJar(type: Jar) {
-  from android.sourceSets.main.java.srcDirs
-  classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-  failOnError false
-  source = android.sourceSets.main.java.sourceFiles
-  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-  classpath += configurations.compile
-}
-
-// build a jar with javadoc
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
-
-artifacts {
-  archives sourcesJar
-  archives javadocJar
-}
