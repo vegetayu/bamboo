@@ -10,17 +10,17 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
     tvHello?.setOnClickListener {
-      Logger.v("点击了这里")
-      Logger.v("tag", "点击了这里")
+      Logger.v("my message")
+      Logger.v("tag", "my message")
 
       val tag: String? = "tag-string-no-null"
-      Logger.v(tag, "点击了这里")
+      Logger.v(tag, "my message")
 
       val tag2: String? = null
-      Logger.v(tag2, "点击了这里")
+      Logger.v(tag2, "my message")
 
-      Logger.v(this@MainActivity, "点击了这里")
-      Logger.v(this, "点击了这里")
+      Logger.v(this@MainActivity, "my message")
+      Logger.v(this, "my message")
     }
   }
 }
