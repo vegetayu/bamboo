@@ -21,7 +21,7 @@ implementation 'com.github.yuluyao:logger:1.0.0'
 ```
 
 output:
-```
+```log
 2000-01-01 10:57:23.889 9310-9310/com.yuluyao.logger V/vegeta: my message
         at com.yuluyao.logger.MainActivity$onCreate$1.onClick(MainActivity$onCreate$1.java:13)
 ```
@@ -33,7 +33,7 @@ output:
 ```
 
 output:
-```
+```log
 2000-01-01 10:57:23.896 9310-9310/com.yuluyao.logger V/tag: my message
         at com.yuluyao.logger.MainActivity$onCreate$1.onClick(MainActivity$onCreate$1.java:14)
 ```
@@ -45,7 +45,7 @@ output:
 ```
 
 output:
-```
+```log
 2000-01-01 10:57:23.901 9310-9310/com.yuluyao.logger V/MainActivity: my message
         at com.yuluyao.logger.MainActivity$onCreate$1.onClick(MainActivity$onCreate$1.java:22)
 ```
