@@ -9,12 +9,12 @@ A wrapper of android.util.Log. Print clickable log info.
 ## install
 
 ```groovy
-implementation 'com.github.yuluyao:logger:0.3.2'
+implementation 'com.github.yuluyao:logger:1.0.0'
 ```
  
 ## how to use
 
-1. log with default tag
+1. **log with default tag**
 
 ```kotlin
     Logger.v("your message")
@@ -26,7 +26,7 @@ output:
         at com.yuluyao.logger.MainActivity$onCreate$1.onClick(MainActivity$onCreate$1.java:13)
 ```
 
-2. log with `String` tag
+2. **log with `String` tag**
 
 ```kotlin
     Logger.v("tag", "your message")
@@ -38,7 +38,7 @@ output:
         at com.yuluyao.logger.MainActivity$onCreate$1.onClick(MainActivity$onCreate$1.java:14)
 ```
 
-3. log with `Object` tag
+3. **log with `Object` tag**
 
 ```kotlin
     Logger.v(this, "your message")
